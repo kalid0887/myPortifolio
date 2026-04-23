@@ -1,0 +1,556 @@
+@import url(https://fonts.google.com/share?selection.family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(77, 12, 12);
+    color:orangered;
+    font-family: 'inter', sans-serif;
+    min-height: 100vh;
+    
+}
+
+header h1 {
+    font-size: 40px;
+    position: relative;
+    left: 40px;
+}
+.first-name {
+    color: orangered;
+}
+
+.last-name {
+    color: white;
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1;  
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid gray;
+    background-color: rgb(43, 9, 9);
+}
+
+.nav_bar {
+    position: relative;
+    right: 19px;
+    
+}
+.nav_bar ul {
+    display: flex;
+    list-style: none;
+    gap: 50px; /* space between items */
+    font-size: 30px;
+    
+}
+
+.nav_bar a {
+    text-decoration: none;
+    color: white;
+}
+#home {
+   display: grid; 
+   grid-template-columns: 1fr 1fr; 
+   grid-template-areas: "left right";
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+    /*margin-bottom: 300px;*/
+    padding-bottom: 50vh;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 60px;
+    top: -10px;
+}
+
+.top-content {
+  flex: 1;
+}
+
+.description {
+  flex: 1;
+  color: white;
+  font-size: 21px;
+}
+
+.social-icons a {
+    position: relative;
+    top: 30px;
+  margin-right: 30px;
+  font-size: 60px;
+  color: orangered;
+  text-decoration: none;
+  
+}
+.cv{
+    position: relative;
+    top: 50px;
+    background-color: orangered;
+    width: 50%;
+    border-radius: 50px;
+    height: 50px;
+    left: 70px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.cv:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #FF4500, 
+              0 0 40px #FF4500, 
+              0 0 80px #FF4500;
+}
+.profile img{
+    position: relative;
+    border-radius: 50%;
+    top: 90px;
+    left: 110px;
+    height: 70%;
+    width:70%;
+    transition: all 0.3s ease;
+    border: 3px solid orangered;
+ /*   box-shadow:
+    0 0 0 8px rgba(255, 60, 0, 0.85),  
+    0 0 0 14px rgba(255, 90, 30, 0.45), 
+    0 0 30px 10px rgba(255, 70, 20, 0.7);
+*/}
+
+.profile img:hover{
+    border-width: 6px;  /* Thicker border */
+    border-color: darkred;
+    transform: scale(1.05);
+    box-shadow:
+    0 0 0 8px rgba(255, 60, 0, 0.85),  
+    0 0 0 14px rgba(255, 90, 30, 0.45), 
+    0 0 30px 10px rgba(255, 70, 20, 0.7);
+}
+
+.wrapper {
+    display: flex;
+    
+}
+
+.static-text{
+    color: white;
+    font-size:40px;
+    font-weight: 400;
+    position: relative;
+    top: 25px;
+}
+
+.wrapper .dynamic-text {
+    margin-left: 15px;
+    line-height: 20px;
+    height: 90px;
+    position: relative;
+    top: -2px;
+    overflow: hidden;
+}
+
+.dynamic-text li {
+    list-style: none;
+    font-size: 40px;
+    font-weight: 400;
+    position: relative;
+    margin-top: 0px;
+    top: 0;
+    border-top: -80px;
+    line-height:92px;
+    animation: slide 12s steps(4) infinite;
+}
+.dynamic-text li::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(77, 12, 12);
+    border-left: 2px solid orangered;
+    animation: typing 3s steps(9) infinite;
+}
+
+@keyframes typing {
+    40%,
+    60% {
+        left: calc(100% + 30px);
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes slide{
+    100%{
+        top: -360px;
+    }
+}
+
+/* section 2 styles begin here*/
+.about{
+    display: grid; 
+   grid-template-columns: 1fr 1fr; 
+   grid-template-areas: "left right";
+    align-items: center;
+    width: 100%;
+    padding-bottom: 60vh;
+}
+.profile3 img{
+  position: relative;
+    border-radius: 50%;
+    top: 80px;
+   left: 25%;
+    height: 60%;
+    width:60%;
+    transition: all 0.3s ease;
+    border: 3px solid orangered;
+  }
+.profile3 img:hover{
+    border-width: 6px;  /* Thicker border */
+    border-color: darkred;
+    transform: scale(1.05);
+    box-shadow:
+    0 0 0 8px rgba(255, 60, 0, 0.85),  
+    0 0 0 14px rgba(255, 90, 30, 0.45), 
+    0 0 30px 10px rgba(255, 70, 20, 0.7);
+}
+.right2{
+    color: #fff;
+    width: 90%;
+}
+.me{
+    color: orangered;
+}
+.right2 h2 {
+    font-size: 2.9rem;
+}
+.right2 h3 {
+    font-size: 2.1em;
+}
+
+.right2 p {
+    color: rgb(185, 176, 176);
+    font-size: 1.1em;
+}
+/* section 3 styles begin here */
+.service {
+    /* display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"service1 service2 service3";
+    column-gap: 30px; */
+    width: 80%;
+    display: grid;
+     align-items: center;
+    width: 100%;
+    padding-bottom: 60vh;
+    
+}
+
+.service h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.9em;
+    padding-bottom: 10vh;
+    gap: 0.25em;
+}
+
+.service h2 span{
+    color: #fff;
+}
+.services-container {
+      margin: 0 auto;      /* centers it + creates left/right space */
+  padding: 0 50px;     /* extra space on small screens */
+
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+
+.service1,
+.service2,
+.service3 {
+  background-color: #353333;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #3d3a3a;
+  border-radius: 15px;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+
+  transition: 0.3s ease;
+  border: 1px solid #222;
+}
+
+/* ICON */
+.icon {
+  font-size: 40px;
+  color: orangered;
+  margin-bottom: 15px;
+}
+
+/* TITLE */
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.9em;
+}
+
+/* TEXT */
+.card p {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.card a {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #00ffff;
+  color: black;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+
+  box-shadow: 0 0 10px #00ffff;
+  transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.card a:hover {
+  box-shadow: 0 0 20px #00ffff;
+}
+
+/* CARD HOVER EFFECT */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+.read {
+    position: relative;
+    top: 30px;
+    background-color: orangered;
+    width: 50%;
+    border-radius: 50px;
+    height: 7vh;
+    
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.read:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #FF4500, 
+              0 0 40px #FF4500, 
+              0 0 80px #FF4500;
+}
+/* section 4 STYLES START heRE */
+.container{
+    padding: 50px 0;
+    color: white;
+}
+.wrap{
+    padding: 10px 10%;
+}
+.card-area {
+    display: grid;
+    margin-top: 50px;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px black;
+    overflow: hidden;
+}
+
+.project-card img {
+    height: 350px;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.5s;
+
+}
+
+.overlay{
+    height: 0;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(transparent, orangered 60%);
+    padding: 0 50px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+    cursor: pointer;
+}
+
+.overlay h3{
+    margin-top: 55%;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+}
+.overlay i{
+    font-size: 29px;
+}
+
+.project-card:hover img {
+    transform: scale(1.2);
+}
+
+.project-card:hover .overlay {
+    height: 100%;
+}
+
+.project h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.9em;
+    padding-bottom: 10vh;
+    gap: 0.25em;
+}
+
+.project h2 span{
+    color: #fff;
+}
+/* SECTION 5 STYLES START HERE */
+
+#contact {
+ 
+    position:  relative;
+    margin-top: 10vh;
+    width: 90%;
+    margin-bottom: 20vh;
+}
+
+.form {
+    height: 70vh;
+    width: 80%;
+    background-color: rgb(43, 9, 9);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    margin-left: 13vw;
+    margin-right: -10vw;
+   
+}
+
+.f{
+    position: relative;
+    top: 10%;
+    width: 90%;
+    height: 15vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+.f input,.f textarea{
+    background:rgb(77, 12, 12);
+    border:1px solid #333;
+    color:#fff;
+    padding:12px;
+    border-radius:8px}
+.f textarea{
+    grid-column:1/3;
+    height:30vh;
+}
+.f input:focus, .f textarea:focus{
+  border-color: orangered;
+  outline: none;
+}
+.f button{
+    grid-column:1/3;
+    padding:12px;
+    border:0;
+    border-radius:8px;
+    background:orangered;
+    color:#000;
+    font-weight:600;
+    transition: all 0.1 ease;
+}
+.f button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #FF4500, 
+              0 0 40px #FF4500, 
+              0 0 80px #FF4500;
+}
+
+.contact h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.9em;
+    padding-bottom: 10vh;
+    gap: 0.25em;
+}
+
+.contact h2 span{
+    color: #fff;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: auto;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* key line */
+  align-items: center;
+  background-color: rgb(43, 9, 9);
+  padding: 10px 0;
+}
+
+.footer p {
+  color: white;
+  margin: 0;
+}
+
+.footer .social-icons {
+    margin-top: -50px;
+  font-size: 1.5em;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  color: orangered;
+}
